@@ -18,6 +18,7 @@ def quicksort(array, low, high):
         quicksort(array, partition_index + 1, high)
         return array
 
+
 def partition(array, low, high):
     i = low - 1
     pivot = array[high]  # pivot
@@ -29,8 +30,3 @@ def partition(array, low, high):
     array[i + 1], array[high] = array[high], array[i + 1]
 
     return i + 1
-
-
-""" array = [100, 4, 6, 33, 56, 67]
-quicksort(array, 0, len(array) - 1)
-print(array) """
