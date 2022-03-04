@@ -1,11 +1,7 @@
 def is_palindrome_iterative(word):
     if word == "":
         return False
-    if len(word) == 1:
-        return True
-    high_index = len(word) - 1
-    for character in word:
-        if character != word[high_index]:
+    for index in range(len(word) // 2):
+        if word[index] != word[-index - 1]:
             return False
-        high_index -= 1
     return True
